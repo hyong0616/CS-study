@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <string>
 
-int N;
+int R1, S;
 int main() {
 
-	scanf("%d", &N);
+	scanf("%d %d", &R1 &S);
 	
-	for (int i = 1; i <= 9; i++)
-	{
-		printf("%d * %d = %d\n",N,i,N*i);
-	}
+	int rst = S * 2 - R1;
+
+	printf("%d", rst);
 
 }
