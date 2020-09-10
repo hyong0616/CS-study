@@ -73,3 +73,23 @@ def test4_2() : #내풀이
         
     for i in range(0,26):
         print(chr(i+code),end='')
+
+"""
+5. 문자열 뒤집기 @@zip@@
+"""
+
+def test5_1(mylist):
+
+    answer = list(map(list,zip(*mylist)))
+    print(answer)
+    return answer
+
+def test5_2(mylist):
+    
+    answer = [[0]*len(mylist[0]) for _ in range(len(mylist))]
+
+    for i,lst in enumerate(mylist) :
+        for j,item in enumerate(lst) :
+            answer[j][i] = item
+    print(answer)
+    return answer
