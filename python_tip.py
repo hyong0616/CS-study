@@ -93,3 +93,19 @@ def test5_2(mylist):
             answer[j][i] = item
     print(answer)
     return answer
+
+
+"""
+6-7. map 함수
+"""
+def test6(mylist):
+    answer = []
+    answer = list(map(int,mylist))
+    return answer
+
+def test7(mylist):
+    answer = list(map(len, mylist))
+    return answer
+
+
+
