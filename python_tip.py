@@ -148,10 +148,51 @@ def test10(mylist):
     #sol_5 = np.array(mylist).flatten().tolist()
 
 
+"""
+11. itertools. permutation SORTING + PERMUTATIONS
+"""
+def test11(mylist) :
+    mylist.sort()
+    print(list(map(list,itertools.permutations(mylist)))) # 3개의 원소로 원하는 수열 만들기
 
 
+"""
+12. Counter Class
+"""
+import collections
+
+def test12(mylist) :
+    collect = collections.Counter(mylist)
+
+    answer = ''.join(collect)
+    print(answer)
 
 
+"""
+13. Advanced Count
+"""
+
+def test13(my_str) :
+
+    answer = {}
+    answer_str = ''
+
+    for s in my_str :
+        try :
+            answer[s] += 1
+        except KeyError :
+            answer[s] = 1
+    sort_answer = sorted(answer.items(), key=lambda x:x[1], reverse = True )
+
+    for k,v in sort_answer :
+        if v == sort_answer[0][1] :
+            answer_str +=k
+        else :
+            break
+
+    print(''.join(sorted(answer_str)))
+
+test13('dfdefdgf')
 
 
 
