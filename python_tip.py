@@ -107,5 +107,14 @@ def test7(mylist):
     answer = list(map(len, mylist))
     return answer
 
+"""
+8. join 함수 
+"""
+
+def test8(mylist) :
+    answer = ''.join(mylist)
+    print(answer)
+    return answer
+
 
 
