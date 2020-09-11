@@ -61,8 +61,3 @@ def solution_bfs() :
 
 
 solution_bfs()
-
-
-
-
-
