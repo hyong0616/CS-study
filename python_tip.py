@@ -75,7 +75,7 @@ def test4_2() : #내풀이
         print(chr(i+code),end='')
 
 """
-5. 문자열 뒤집기 @@zip@@
+5. 문자열 뒤집기 ★zip★
 """
 
 def test5_1(mylist):
@@ -118,5 +118,41 @@ def test8(mylist) :
 
 
 """
-9. 
+9. Cartesian Product
 """
+
+import itertools 
+
+def test9():
+    iterable1 = 'ABCD'
+    iterable2 = 'xy'
+    iterable3 = '1234'
+    new_str = list(itertools.product(iterable1,iterable2,iterable3))
+    print(new_str)
+
+"""
+10. 2차원 리스트 1차원 리스트로 변경
+1) sum 함수 ★
+2) itertools
+3) unpacking 
+4) list comprehension ★
+5) numpy flatten
+"""
+
+def test10(mylist):
+
+    sol_1 = sum(mylist,[])
+    sol_2 = list(itertools.chain.from_iterable(mylist))
+    sol_3 = list(itertools.chain(*mylist))
+    sol_4 = [element for array in mylist for element in array]
+    #sol_5 = np.array(mylist).flatten().tolist()
+
+
+
+
+
+
+
+
+
+
