@@ -211,7 +211,7 @@ def two_pointer(n, m,arr) :
         #정답인 경우
         elif sum == m :
             answer +=1
-            
+
         #빼야할게 있다면
         else :
             sum -= arr[left]
@@ -219,4 +219,21 @@ def two_pointer(n, m,arr) :
     return answer 
 
 
-def 
+def binary_search (arr,target) :
+
+    low = 0 
+    high = len(arr)-1
+    mid = 0
+    answer = -1
+
+    while low <= high :
+        mid = (low+ high)//2
+
+        if arr[mid] > target :
+            high = mid -1
+        elif arr[mid] < target :
+            low = mid+1
+        else :
+            answer = mid
+
+    return answer
