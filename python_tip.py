@@ -192,8 +192,31 @@ def test13(my_str) :
 
     print(''.join(sorted(answer_str)))
 
-test13('dfdefdgf')
 
 
+def two_pointer(n, m,arr) :
+
+    left = 0
+    right = 0
+    sum = 0
+    answer = 0
+
+    while left <= right and right < n :
+        
+        # 더 더해야할게 있다면 
+        if sum < m :
+            
+            sum+= arr[right]
+            right +=1
+        #정답인 경우
+        elif sum == m :
+            answer +=1
+            
+        #빼야할게 있다면
+        else :
+            sum -= arr[left]
+            left +=1 
+    return answer 
 
 
+def 
