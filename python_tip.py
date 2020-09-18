@@ -1,4 +1,10 @@
 #python TIP
+"""
+0. List 선언 및 초기화
+"""
+arr1 = [0 for _ in range(100)]
+arr2 = [[0 for _ in range(100)] for _ in range(100)]
+
 
 """
 1. divmod : 몫과 나머지 구하기
@@ -237,3 +243,4 @@ def binary_search (arr,target) :
             answer = mid
 
     return answer
+
